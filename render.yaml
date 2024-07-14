@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cp-vacations-email
+    env: node
+    region: oregon
+    buildCommand: 'npm install'
+    startCommand: 'node app.js'
+    plan: free
+    envVars:
+      - key: EMAIL
+        value: 'contact.cpsvacations@gmail.com'
+      - key: EMAIL_PASSWORD
+        value: 'contact123@cpsvacations'
